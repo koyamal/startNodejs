@@ -3,3 +3,6 @@
 for(arg of process.argv){
     console.log(arg);
 }
+
+console.log(`process.cwd(): ${process.cwd()}`);
+console.log(`__dirname: ${__dirname}`);
