@@ -3,7 +3,8 @@ const EventEmitter = require('events');
 const ee = new EventEmitter();
 
 const ontick = function(){
-    console.log('test');
+    console.log('event is called');
+    ee.off('event', ontick);
 };
 
 ee.on('event', ontick);
