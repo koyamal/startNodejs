@@ -3,7 +3,7 @@ const EventEmitter = require('events');
 class Clock extends EventEmitter{
     constructor(){
         super();
-        console.log(this.emit);
+        // console.log(this.emit);
         this.interval = 2000;
         this.timer = null;
     }
@@ -15,9 +15,6 @@ class Clock extends EventEmitter{
             // console.log(typeof this.emit);
             this.emit("tick");
         }, this.interval);
-    }
-    test(){
-        this.emit('tick');
     }
     stop(){
         if(!this.timer){
