@@ -12,9 +12,13 @@ class Clock extends EventEmitter{
             this.stop();
         }
         this.timer = global.setInterval(() => {
-            // console.log(typeof this.emit);
+            // console.log(this);
             this.emit("tick");
         }, this.interval);
+        // this.timer = global.setInterval(function() {
+        //     console.log(this);
+        //     //this.emit("tick");
+        // }, this.interval);
     }
     stop(){
         if(!this.timer){
