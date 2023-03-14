@@ -12,3 +12,4 @@ clock.on("tick", function(){
 // console.log(clock.emit('tick'));
 clock.start();
 // clock.test();
+console.log(clock);
