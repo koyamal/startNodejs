@@ -24,6 +24,11 @@ eventEmitter.on('removeItem', () => {
   eventEmitter.removeListener('box', listenerMessage1);
 });
 
+eventEmitter.on('addItem1', () => {
+  console.log('add listener1');
+  eventEmitter.addListener('box', listenerMessage1);
+});
+
 eventEmitter.emit('addItem1');
 eventEmitter.emit('addItem2');
 eventEmitter.emit('removeItem');
