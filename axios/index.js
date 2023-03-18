@@ -9,6 +9,12 @@ const useAxios = async function(){
     const data = await axios('https://google.com');
     // console.log(data.data);
     await writeFile(path.join(__dirname,'sample.html'), data.data, 'utf-8');
+
+    return 'OK';
 }
 
-useAxios();
+useAxios().then((val)=>{
+    console.log(val);
+}).catch((err) => {
+    console.log(err);
+});
