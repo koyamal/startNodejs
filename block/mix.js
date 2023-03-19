@@ -12,5 +12,10 @@ fs.readFile("./sample.txt", (readFileErr, data) => {
   console.log(data);
   fs.unlink("./sample.txt", (unlinkErr) => {
     if (unlinkErr) throw unlinkErr;
+    fs.readFile("./sample.txt", (error, data) => {
+        if (error){
+            throw error;
+        }
+    });
   });
 });
