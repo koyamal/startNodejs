@@ -11,6 +11,10 @@ app.get('/test', (req, res) => {
 
 app.get('/goo', (req, res) => {
     res.redirect('https://XXXXX-XXXXXXX-XXXXXXX.com');
-})
+});
+
+app.get('/render', (req, res) => {
+    res.render('index');
+});
 
 app.listen(3000);
