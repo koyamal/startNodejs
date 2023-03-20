@@ -15,6 +15,7 @@ const useAxios = async function(){
 }
 // console.log(fetch);
 const useFetch = async function(){
+    console.log('This is useFetch');
     const data = await fetch("https://google.com");
     console.log(data);
 }
@@ -23,6 +24,10 @@ useFetch();
 
 useAxios().then((val)=>{
     console.log(val);
+    return val;
+}).then((val) => {
+    console.log(val);
+    throw new Error("This is Error");
 }).catch((err) => {
     console.log(err);
 });
