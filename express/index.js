@@ -14,7 +14,7 @@ app.get('/goo', (req, res) => {
 });
 
 app.get('/render', (req, res) => {
-    res.render('index');
+    res.render('test.ejs');
 });
 
 app.listen(3000);
