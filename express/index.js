@@ -10,7 +10,7 @@ app.get('/test', (req, res) => {
 });
 
 app.get('/goo', (req, res) => {
-    res.redirect('https://google.com');
+    res.redirect('https://XXXXX-XXXXXXX-XXXXXXX.com');
 })
 
 app.listen(3000);
