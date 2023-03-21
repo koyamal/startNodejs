@@ -14,7 +14,7 @@ app.get('/goo', (req, res) => {
 });
 
 app.get('/render', (req, res) => {
-    res.render('test.ejs');
+    res.render('test.ejs', {prop1: 'Hello'});
 });
 
 app.listen(3000);
